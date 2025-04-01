@@ -1,0 +1,148 @@
+{
+  "product": [
+    {
+      "productType": "tee",
+      "productName": "BEAT SOUNDS TEE",
+      "price": 45,
+      "stock": 8,
+      "imageUrl": "./assets/images/tee-beat-sounds.jpg",
+      "id": "5d2c"
+    },
+    {
+      "productType": "tee",
+      "productName": "CROWN BAND TEE",
+      "price": 45,
+      "stock": 6,
+      "imageUrl": "./assets/images/tee-crown-band.jpg",
+      "id": "919a"
+    },
+    {
+      "productType": "tee",
+      "productName": "WORKER TEE",
+      "price": 45,
+      "stock": 18,
+      "imageUrl": "./assets/images/tee-worker.jpg",
+      "id": "6bc7"
+    },
+    {
+      "productType": "tee",
+      "productName": "BUANA STOCK TEE",
+      "price": 50,
+      "stock": 17,
+      "imageUrl": "./assets/images/tee-buana-stock.jpg",
+      "id": "d396"
+    },
+    {
+      "productType": "tee",
+      "productName": "KINGPIN TEE PINGMENT DYED",
+      "price": 71,
+      "stock": 15,
+      "imageUrl": "./assets/images/tee-kingpin.jpg",
+      "id": "b56a"
+    },
+    {
+      "productType": "hoodie",
+      "productName": "STUSSY BASIC HOODIE",
+      "price": 130,
+      "stock": 18,
+      "imageUrl": "./assets/images/hoodie-basic.jpg",
+      "id": "6207"
+    },
+    {
+      "productType": "hoodie",
+      "productName": "STUSSY BUANA HOODIE",
+      "price": 141,
+      "stock": 20,
+      "imageUrl": "./assets/images/hoodie-buana.jpg",
+      "id": "101d"
+    },
+    {
+      "productType": "hoodie",
+      "productName": "STUSSY RASTA HOODIE",
+      "price": 123,
+      "stock": 18,
+      "imageUrl": "./assets/images/hoodie-rasta.jpg",
+      "id": "76a8"
+    },
+    {
+      "productType": "jacket",
+      "productName": "BUILT REVERSIBLE BOMBER JACKET",
+      "price": 265,
+      "stock": 20,
+      "imageUrl": "./assets/images/jacket-bomber.jpg",
+      "id": "6bfe"
+    },
+    {
+      "productType": "jacket",
+      "productName": "WORK JACKET CONTRAST",
+      "price": 225,
+      "stock": 20,
+      "imageUrl": "./assets/images/jacket-contrast.jpg",
+      "id": "e2cd"
+    },
+    {
+      "productType": "jacket",
+      "productName": "HARDWEAR SUBZERO<sup>TM</sup> DOWN JACKET",
+      "price": 350,
+      "stock": 20,
+      "imageUrl": "./assets/images/jacket-down.jpg",
+      "id": "a91b"
+    },
+    {
+      "productType": "jacket",
+      "productName": "SOUVENIR JACKET",
+      "price": 320,
+      "stock": 20,
+      "imageUrl": "./assets/images/jacket-souvenir.jpg",
+      "id": "b596"
+    },
+    {
+      "productType": "accessories",
+      "productName": "SS LINK CARABINER",
+      "price": 40,
+      "stock": 20,
+      "imageUrl": "./assets/images/accessories-carabiner.jpg",
+      "id": "2b4e"
+    },
+    {
+      "productType": "accessories",
+      "productName": "8 BALL KEYCHAIN",
+      "price": 15,
+      "stock": 20,
+      "imageUrl": "./assets/images/accessories-keychain.jpg",
+      "id": "4583"
+    },
+    {
+      "productType": "accessories",
+      "productName": "RENE SUNGLASSES",
+      "price": 160,
+      "stock": 20,
+      "imageUrl": "./assets/images/accessories-penejpg.jpg",
+      "id": "4e0e"
+    },
+    {
+      "productType": "accessories",
+      "productName": "STACKING MUG SET OF 6",
+      "price": 95,
+      "stock": 20,
+      "imageUrl": "./assets/images/accessories-stacking.jpg",
+      "id": "94b6"
+    },
+    {
+      "id": "968c",
+      "productType": "accessories",
+      "productName": "STOCK CREW SOCKS 3 PACK",
+      "price": 30,
+      "stock": 20,
+      "imageUrl": "./assets/images/accessories-stock.jpg"
+    },
+    {
+      "id": "sanpham_18",
+      "productType": "jacket",
+      "productName": "BEAT SOUNDS TEE",
+      "price": 45,
+      "stock": 85,
+      "imageUrl": "./assets/images/sonyCh710n-2.png"
+    }
+  ]
+}

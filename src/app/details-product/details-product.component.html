@@ -1,0 +1,98 @@
+<div class="product-details">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left">
+                    <img src="{{productDetail?.imageUrl}}" width="100%" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right">
+                    <p class="name">{{productDetail?.productName}}</p>
+                    <span>${{productDetail?.price}}</span>
+                    <div class="size name">
+                        <p>S</p>
+                        <p>M</p>
+                        <p>L</p>
+                        <p>XL</p>
+                        <p>XXL</p>
+                    </div>
+                    <div class="details">
+                        <p class="name" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            DETAILS <i class="fa-solid fa-caret-right"></i>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <p class="description">Subzero™ down jacket in Pertex® Quantum Y Fuse 30D ripstop fabric
+                                with a water-resistant finish. Features warm 650-fill power certified down
+                                insulation, durable overlay coating for abrasion and weather protection, and secured
+                                zip pocketing. Stüssy & Mountain Hardwear co-branded logo embroidered at the chest.
+                            </p>
+                            <ul>
+                                <li>Packable design</li>
+                                <li>Nylon overlay coating on high-exposure areas</li>
+                                <li>Secure zipped chest pocket with internal gear organization</li>
+                                <li>Secure zipped hand pockets</li>
+                                <li>Internal zip pocket</li>
+                                <li>Material: 100% Pertex® Quantum Y Fuse 30D recycled polyester ripstop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="size-guide">
+                        <p class="name" data-bs-toggle="collapse" data-bs-target="#size-guide" aria-expanded="false"
+                            aria-controls="size-guide">
+                            SIZE GUIDE <i class="fa-solid fa-caret-right"></i>
+                        </p>
+                        <div class="collapse" id="size-guide">
+                            <p class="mt-3 mb-3">All measurements are taken across the garment while laid flat.</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">SIZE</th>
+                                        <th scope="col">S</th>
+                                        <th scope="col">M</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">XL</th>
+                                        <th scope="col">XXL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">CHEST</th>
+                                        <td>60.5</td>
+                                        <td>63.5</td>
+                                        <td>67.3</td>
+                                        <td>71.1</td>
+                                        <td>74.9</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">FRONT LENGTH</th>
+                                        <td>64.5</td>
+                                        <td>67.3</td>
+                                        <td>70.1</td>
+                                        <td>73.2</td>
+                                        <td>74.4</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">SLEEVE LENGTH</th>
+                                        <td>90.4</td>
+                                        <td>92.7</td>
+                                        <td>95.3</td>
+                                        <td>97.8</td>
+                                        <td>100.3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src="./assets/images/Size_Guide.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="button-add sticky-bottom">
+                        <p class="btn-add btn" (click)="Add()">ADD TO BAG</p>
+                        <p class="btn-checkout btn">CHECKOUT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

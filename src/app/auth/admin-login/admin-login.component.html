@@ -1,0 +1,20 @@
+
+<div class="container-lg">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+            <div class="login">
+                <h2 class="text-center">LOGIN ADMIN</h2>
+                <p>Please provide the email address and password associated with the account. If you're having
+                    trouble, please use the prompt below to reset your password.</p>
+                <p>Fields labeled with an asterisk (*) are required.</p>
+                <form action="" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                    <input type="email" placeholder="EMAIL ADDRESS*" [(ngModel)]="email" name="email"
+                        placeholder="EMAIL" type="email">
+                    <input type="password" placeholder="PASSWORD*" [(ngModel)]="password" name="password"
+                        placeholder="PASSWORD" type="password">
+                    <button>SIGN IN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

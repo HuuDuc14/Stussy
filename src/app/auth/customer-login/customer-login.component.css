@@ -1,0 +1,115 @@
+
+.row{
+  margin-top: 110px;
+}
+  .login {
+  font-family: HelveticaNeue, sans-serif;
+  padding: 40px ;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+
+  h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 1.03125rem;
+    margin: 25px 0 15px 0;
+  }
+
+  p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 13px;
+    margin: 14px 0;
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    height: 55px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: gray;
+    color: white;
+  }
+
+
+}
+
+
+
+.register {
+  font-family: HelveticaNeue, sans-serif;
+  padding: 40px ;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+
+  h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 1.03125rem;
+    margin: 25px 0 15px 0;
+  }
+
+  p {
+    font-size: 11px;
+    margin: 0;
+  }
+
+  input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 13px;
+    margin: 14px 0;
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    height: 55px;
+    margin-top: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 30px;
+  }
+  .showRegister{
+    display: none;
+  }
+  button:hover {
+    background-color: gray;
+    color: white;
+  }
+
+}
+
+.password{
+  position: relative;
+  .showPassword{
+    position: absolute;
+    bottom: 21px;
+    right: 2px;
+    cursor: pointer;
+  }
+}
+

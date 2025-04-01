@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>password</th>
+        <th></th>
+    </thead>
+    <tbody>
+        @for (item of userList; track $index) {
+        <tr>
+            <td class="id">{{item.id}}</td>
+            <td class="name">{{item.name}}</td>
+            <td class="username">{{item.email}}</td>
+            <td class="password">{{item.password}}</td>
+            <td><i class="fa-solid fa-delete-left" (click)="Delete(item.id)"></i></td>
+        </tr>
+        }
+    </tbody>
+</table>

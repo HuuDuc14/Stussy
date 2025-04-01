@@ -1,0 +1,89 @@
+<div class="d-flex justify-content-end">
+    <button class="btn bg-black px-3 py-1 text-white" data-bs-toggle="modal" data-bs-target="#modalId"
+        (click)="isNut=1"><i class="fa-regular fa-square-plus me-2"></i> ADD</button>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <th>id</th>
+            <th>image</th>
+            <th>name</th>
+            <th>price</th>
+            <th>type</th>
+            <th>stock</th>
+            <th></th>
+        </thead>
+        <tbody>
+            @for (item of productList; track $index) {
+            <tr>
+                <td class="id">{{item.id}}</td>
+                <td class="img"><img src="{{item.imageUrl}}" width="100%" alt=""></td>
+                <td class="name">{{item.productName}}</td>
+                <td class="price">${{item.price}}</td>
+                <td class="type">{{item.productType}}</td>
+                <td class="stock">{{item.stock}}</td>
+                <td class="chucnang">
+                    <i class="fa-solid fa-wrench" data-bs-toggle="modal" data-bs-target="#modalId"
+                        (click)="Edit(item.id);isNut=2;"></i>
+                    <i class="fa-solid fa-delete-left" (click)="Delete(item.id)"></i>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitleId">
+                    ADD PRODUCT
+                </h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formProduct">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            [formControl]="formProduct.controls.productName">
+                        <label for="floatingInput">Product Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [formControl]="formProduct.controls.productType">
+                            <option selected value="tee">Tee</option>
+                            <option value="jacket">Jacket</option>
+                            <option value="hoodie">Hoodie</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                        <label for="floatingSelect">Type</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" [formControl]="formProduct.controls.price">
+                        <label for="floatingInput">Price</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com" [formControl]="formProduct.controls.stock">
+                        <label for="floatingInput">Stock</label>
+                    </div>
+                    <input type="file" class="form-control" (change)="onChange($event)" >
+                    <input type="text" name="" id="" [formControl]="formProduct.controls.imageUrl">
+                    <img [src]="file" width="20%" alt="">
+                </form>
+            </div>
+            <div class="modal-footer">
+                @if (isNut==1) {
+                <button type="button"  data-bs-dismiss="modal" (click)="Add()">Save</button>
+                }
+                @if(isNut==2){
+                <button type="button" data-bs-dismiss="modal" (click)="Update()">Update</button>
+                }
+                <button type="button" class="bg-white text-dark" (click)="isNut=1" data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

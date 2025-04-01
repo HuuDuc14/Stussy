@@ -1,0 +1,116 @@
+<nav class="navbar bg-body-tertiary navbar-expand-md fixed-top">
+  <div class="container-lg">
+    <a class="navbar-brand" href="#"><img src="./assets/images/Stussy_Logo-removebg-preview.png" width="100px" alt="">
+    </a>
+    <div class="right ms-auto me-2">
+      <div class="d-md-none d-flex gap-4 fs-5 icon">
+        <i class="fa-brands fa-opencart"  data-bs-toggle="offcanvas" data-bs-target="#Id1" aria-controls="Id1"></i>
+        <p>{{itemCount()}}</p>
+        <i class="fa-regular fa-user" routerLink="/login"></i>
+      </div>
+    </div>
+    <div class="navbar-toggler bg-white border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header justify-content-center">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img
+            src="./assets/images/Stussy_Logo-removebg-preview.png" width="60px" alt=""></h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start ms-3 flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" href="" data-bs-toggle="offcanvas" >HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/shop" href="#" data-bs-toggle="offcanvas">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FEATURES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SUPPORT</a>
+          </li>
+        </ul>
+        <div class="right">
+          <input type="text" placeholder="SEARCH HERE" [(ngModel)]="searching" (ngModelChange)="onSearchChange()"
+            name="searching">
+          <i class="fa-solid fa-magnifying-glass tim-kiem" routerLink="/shop"></i>
+          <div class="d-none d-md-flex gap-4 ms-4 fs-5 icon">
+            <i class="fa-brands fa-opencart"  data-bs-toggle="offcanvas" data-bs-target="#Id1" aria-controls="Id1"></i>
+            <p>{{itemCount()}}</p>
+            <i class="fa-regular fa-user" routerLink="/login"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="footer">
+  <div class="container-lg d-flex justify-content-between">
+    <div class="contact">
+      <a href="https://www.facebook.com/profile.php?id=100023003417709"><i class="fa-brands fa-facebook"></i></a>
+      <a href=""> <i class="fa-brands fa-instagram"></i></a>
+      <a href=""> <i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-tiktok"></i></a>
+
+    </div>
+    <div class="logo">
+      <img src="./assets/images/stussy_tokio.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="copy-right text-center small text-secondary p-3">
+  <p>&copy; Nguyen Huu Duc</p>
+</div>
+
+
+<div class="cart offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Id1">
+  <div class="offcanvas-header">
+      <h5>SHOPPING BAG</h5>
+      <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    @if(cartList.length > 0){
+      @for (item of cartList; track $index) {
+        <div class="cart-product">
+            <div class="img">
+                <img src="{{item.imageUrl}}" width="100%" alt="">
+            </div>
+            <div class="cart-information">
+                <h6>{{item.name}}</h6>
+                <p>BLACK / M</p>
+                <p>${{item.price * item.quantity}}</p>
+                <div class="cart_quantity">
+                    <button class="soluong" (click)="giam(item.id)">-</button>
+                    <input class="soluong" type="text" readonly name="" id="" value={{item.quantity}}>
+                    <button class="soluong" (click)="tang(item.id)">+</button>
+                    <i class="fa-regular fa-trash-can ms-3" (click)="remove(item.id)"></i>
+                </div>
+            </div>
+        </div>
+      }
+    }@else {
+      <p>chưa có sản phẩm nào</p>
+    }
+  </div>
+  <div class="total">
+      <p>SUBTOTAL</p>
+      <p>${{total()}}</p>
+  </div>
+  <div class="checkout">
+      <div class="btn-continue" data-bs-dismiss="offcanvas">CONTINUE SHOPPING</div>
+      <div class="btn btn-checkout">CHECKOUT</div>
+  </div>
+</div>
+

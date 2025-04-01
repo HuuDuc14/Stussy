@@ -1,0 +1,52 @@
+.phanloai{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin-top: 90px;
+    gap: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+.phanloai p:hover{
+    color: red;
+    border-bottom: 1px solid black;
+}
+
+.products {
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.product {
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.product p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.product .thongtin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    display: none;
+}
+.product .thongtin p {
+    margin: 0;
+    color: red;
+
+}
+
+.product:hover .thongtin {
+    bottom: 28px;
+    display: flex;
+}

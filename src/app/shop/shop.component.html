@@ -1,0 +1,28 @@
+<div class="container-lg">
+    <div class="phanloai">
+        <p (click)="phanloai('all')">All</p>
+        <p (click)="phanloai('tee')">Tee</p>
+        <p (click)="phanloai('jacket')">Jacket</p>
+        <p (click)="phanloai('hoodie')">Hoodie</p>
+        <p (click)="phanloai('accessories')">Accessories</p>
+    </div>
+</div>
+
+<div class="products">
+    <div class="container-lg">
+        <div class="row">
+            @for (item of filterProductList; track $index) {
+            <div class="col-sm-6 col-lg-3">
+                <div class="product" [routerLink]="[ '/product', item.id]">
+                    <img src="{{item.imageUrl}}" class="anh" width="100%" alt="" >
+                    <p>{{item.productName}}</p>
+                    <div class="thongtin">
+                        <p>${{item.price}}</p>
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

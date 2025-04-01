@@ -1,0 +1,186 @@
+.navbar {
+    font-family: HelveticaNeue, sans-serif;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    .nav-item {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .nav-item:hover {
+        font-weight: 900;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        input {
+            border: none;
+            border-bottom: 1px solid gray;
+            height: 30px;
+            outline: none;
+            font-size: 10px;
+            width: 60%;
+            font-weight: 800;
+            padding-right: 20px;
+        }
+
+        .tim-kiem {
+            position: absolute;
+            top: 12px;
+            right: 90px;
+        }
+
+        .icon {
+            position: relative;
+
+            p {
+                position: absolute;
+                font-size: small;
+                font-weight: bold;
+                background-color: red;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                text-align: center;
+                color: white;
+                top: -8px;
+                right: 35px;
+            }
+        }
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+}
+
+.footer{
+    padding: 30px 10px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid rgb(229, 229, 229);
+    .contact{
+        width: 60%;
+        display: flex;
+        gap: 20px;
+        font-size: 25px;
+        align-items: center;
+        
+        i{
+            cursor: pointer;
+            color: rgb(46, 46, 46);
+        }
+        
+    }
+    .logo{
+        width: 40%;
+        text-align: end;
+        img{
+            width: 100px;
+        }
+    }
+}
+
+.cart{
+    width: 100%;
+    font-family: HelveticaNeue, sans-serif;
+    padding: 0 20px;
+
+    .offcanvas-header{
+        border-bottom: 1px solid rgb(229, 229, 229);
+        h5{
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 7px;
+        }
+    }
+    .offcanvas-body{
+        padding: 20px 0 0 0;
+    }
+    .total{
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 20px 0 0 0;
+        border-top: 1px solid rgb(229, 229, 229);
+    }
+    .checkout{
+        font-size: 13px;
+        font-weight: 600;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        .btn-continue{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .btn-checkout{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.cart .offcanvas-body .cart-product{
+    display: flex;
+    margin-bottom: 30px;
+    .img{
+        width: 40%;
+    }
+    .cart-information{
+        width: 60%;
+        padding: 0 10px 0 20px;
+        h6{
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 13px;
+            margin: 0;
+            padding: 18px 0;
+            border-bottom: 1px solid rgb(229, 229, 229);
+        }
+        .cart_quantity{
+            margin-top: 20px;
+            .soluong{
+                width: 30px;
+                height: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+            i{
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+}
+
+@media (min-width: 768px) {
+    .cart {
+        width: 530px;
+    }
+}

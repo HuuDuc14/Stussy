@@ -1,0 +1,82 @@
+<div class="container-lg">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="login">
+                <h2>LOGIN</h2>
+                <h4>REGISTERED CUSTOMERS</h4>
+                <p>Please provide the email address and password associated with the account. If you're having
+                    trouble, please use the prompt below to reset your password.</p>
+                <p>Fields labeled with an asterisk (*) are required.</p>
+                <form action="" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                    <input placeholder="EMAIL ADDRESS*" [(ngModel)]="email" name="email" placeholder="Email"
+                        type="email">
+                    <div class="password">
+                        <input placeholder="PASSWORD*" [(ngModel)]="password" name="password" placeholder="Password"
+                            [type]="showPassWord? 'text'  : 'password' ">
+                        <i [className]="showPassWord ? 'fa-solid fa-eye-slash showPassword' : 'fa-solid fa-eye showPassword'"
+                            (click)="showPassword()"></i>
+                    </div>
+                    @if (flag == false) {
+                    <small class="text-danger">incorrect email or password </small>
+                    }
+
+                    <button>SIGN IN</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="register">
+                <h2>REGISTER</h2>
+                <div id="register">
+                    <h4>NEED AN ACCOUNT</h4>
+                    <p>By creating an account with our store, you will be able to move through the checkout process
+                        faster,
+                        store multiple shipping addresses, view and track your orders in your account, and more.</p>
+                    <button (click)="showRegister()" [disabled]="">PROCEED TO REGISTER</button>
+                </div>
+                <div class="showRegister" id="showRegister">
+                    <h4>NEW CUSTOMERS</h4>
+                    <p>By creating an account with our store, you will be able to move through the checkout process
+                        faster, store multiple shipping addresses, view and track your orders in your account and more.
+                    </p>
+                    <p>Fields labeled with an asterisk (*) are required.</p>
+                    <form class="" action="" [formGroup]="formRegister">
+                        <input class="" placeholder="Name" type="name" formControlName="name">
+                        @if(formRegister.controls.name.invalid && (formRegister.controls.name.dirty ||
+                        formRegister.controls.name.touched)){
+                        @if (formRegister.controls.name.errors?.['required']) {
+                        <small class="text-danger">Name cannot empty</small>
+                        }
+                        }
+                        <input class="" name="email" placeholder="Email" type="email" formControlName="email">
+                        @if(formRegister.controls.email.invalid && (formRegister.controls.email.dirty ||
+                        formRegister.controls.email.touched)){
+                        @if (formRegister.controls.email.errors?.['required']) {
+                        <small class="text-danger">email cannot empty</small>
+                        }
+                        @if (formRegister.controls.email.errors?.['email']) {
+                        <small class="text-danger">email is not in correct format</small>
+                        }
+                        }
+                        <div class="password">
+                            <input class="" name="password" placeholder="Password" [type]="showPassWord ? 'text' : 'password' "
+                                formControlName="password">
+                            <i [className]="showPassWord ? 'fa-solid fa-eye-slash showPassword' : 'fa-solid fa-eye showPassword'"
+                                (click)="showPassword()"></i>
+                        </div>
+                        @if(formRegister.controls.password.invalid && (formRegister.controls.password.dirty ||
+                        formRegister.controls.password.touched)){
+                        @if (formRegister.controls.password.errors?.['required']) {
+                        <small class="text-danger">password cannot empty</small>
+                        }
+                        @if (formRegister.controls.password.errors?.['minlength']) {
+                        <small class="text-danger">minimum password 6 characters</small>
+                        }
+                        }
+                        <button class="" [disabled]="formRegister.invalid" (click)="AddUser()">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

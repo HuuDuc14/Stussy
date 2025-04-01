@@ -1,0 +1,31 @@
+.dashboard {
+    font-family: HelveticaNeue, sans-serif;
+    margin-top: 100px;
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: black;
+        background-color: white;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        border-bottom: 1px solid rgb(229, 229, 229);
+        font-size: 16px;
+        font-weight: 600;
+
+        li {
+            margin: 0 30px 0 0;
+
+            button {
+                color: #A9A9A9;
+                display: block;
+            }
+        }
+    }
+}
